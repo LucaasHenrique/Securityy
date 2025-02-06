@@ -24,6 +24,10 @@ public class UserService {
     }
 
     public User save(User user) {
+        String userPassword = user.getPassword();
+        if (userPassword == null) {
+            throw new IllegalArgumentException("password cannot be null");
+        }
         user.setPassword(encoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
