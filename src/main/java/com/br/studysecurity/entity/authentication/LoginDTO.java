@@ -1,4 +1,4 @@
 package com.br.studysecurity.entity.authentication;
 
-public record LoginDTO() {
+public record LoginDTO(String username, String password) {
 }

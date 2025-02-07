@@ -1,4 +1,6 @@
 package com.br.studysecurity.entity.authentication;
 
-public record RegisterDTO() {
+import com.br.studysecurity.entity.UserRole;
+
+public record RegisterDTO(String username, String password, UserRole role) {
 }
